@@ -3,12 +3,9 @@ import ProductCardList from './ProductCardList'
 
 export default function HomePage() {
     return (
-        // <div className="bg-red-900 w-full h-screen flex items-center justify-center">
-        //     <h1>My Home page</h1>
-        // </div>\
-
-        <div className="bg-gray-100 min-h-screen">
-            <ProductCardList />
+        <div className="text-center mt-10">
+            <h1 className="text-3xl font-bold">Welcome to MyShop!</h1>
+            <p className="mt-2 text-gray-600">Browse our product catalog.</p>
         </div>
     )
 }
