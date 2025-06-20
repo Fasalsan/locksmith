@@ -19,9 +19,13 @@ export default function Navbar() {
     ];
 
     return (
-        <nav className="bg-blue-600 text-white shadow sticky top-0 z-50">
-            <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-                <div className="text-xl font-bold">MyShop</div>
+        <nav className="bg-red-900 text-white shadow sticky top-0 z-50">
+            <div className="max-w-7xl mx-auto px-4 lg:px-6 flex justify-between items-center">                {/* <div className="text-xl font-bold">LockSmith</div> */}
+                <div>
+                    <img src="https://www.zarla.com/images/zarla-crafty-keys-1x1-2400x2400-20211103-4qj87ktm4qtp4jyvxmwh.png?crop=1:1,smart&width=250&dpr=2" alt=""
+                        className='h-24 w-24'
+                    />
+                </div>
 
                 {/* Desktop Menu */}
                 <div className="hidden md:flex space-x-6">
@@ -48,7 +52,7 @@ export default function Navbar() {
 
             {/* Mobile Menu */}
             {menuOpen && (
-                <div className="md:hidden px-4 pb-4 space-y-2 bg-blue-600">
+                <div className="md:hidden px-4 pb-4 space-y-4 bg-red-900 pt-12">
                     {navItems.map((item) => (
                         <NavLink
                             key={item.to}
