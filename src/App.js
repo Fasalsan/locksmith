@@ -13,16 +13,16 @@ export default function App() {
   return (
     <Router>
       <Navbar />
-      <div className="p-2">
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/products" element={<ProductCardList />} />
-          <Route path="/product/:id" element={<ProductDetail />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<div className="text-center mt-10">404 Not Found</div>} />
-        </Routes>
-      </div>
+
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/products" element={<ProductCardList />} />
+        <Route path="/product/:id" element={<ProductDetail />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<div className="text-center mt-10">404 Not Found</div>} />
+      </Routes>
+
     </Router>
   );
 }
