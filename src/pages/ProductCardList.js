@@ -2,6 +2,7 @@ import React from 'react';
 import ProductCard from '../component/ProductCard';
 import Modal from '../component/Modal';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const products = [
     { id: 1, name: "សោរឡាន", price: 19.99, image: "https://northcoastkeyless.com/wp-content/uploads/2021/11/HONPROX5-NM-MAIN1.jpg" },
@@ -18,8 +19,10 @@ const products = [
 const ProductCardList = () => {
     const [selectedProduct, setSelectedProduct] = useState(null);
 
+    const navigate = useNavigate();
+
     const handleView = (product) => {
-        setSelectedProduct(product);
+        navigate(`/products/${product.id}`, { state: product }); // optionally pass full data
     };
 
     const handleCloseModal = () => {
